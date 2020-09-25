@@ -19,3 +19,12 @@ import { createStore } from 'redux'
     `.dispatch(action)` action is the way how to communicate with reducer by sending action to reducer. Dispatch will call reducer with current state + action just sent. Action must be object(no string!), and this object must have 'type' as key (otherwise it complains "Actions may not have an undefined 'type' property").
 
     `.subscribe()` allows us to listen to the changes in our store.
+
+### NEVER Mutate State
+
+: Don't mutate(ex. '.push()'), return new state objects
+
+- Three Principles in Redux (https://redux.js.org/introduction/three-principles)
+  1. Single source of truth
+  2. State is read-only
+  3. Changes are made with pure functions
